@@ -1,0 +1,70 @@
+//gap sirve para dejar un espaciado entre las listas.
+body {
+  margin: 0;
+  background: #ededed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+header {
+  background: #4b74aa;
+  color: #fff;
+}
+
+nav {
+  padding: 1rem;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+      position: relative;
+
+      & a {
+        text-decoration: none;
+        padding: 6px 30px;
+        background: #ededed;
+        color: #326;
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      position: absolute;
+      margin: 0;
+      top: 33px;
+      display: none;
+
+      & li {
+        width: 30rem;
+        padding-bottom: 10px;
+      }
+    }
+
+    li:hover ul {
+      display: flex;
+      & li a {
+        background-color: red;
+        padding-left: 1px;
+      }
+    }
+
+    li:hover ul ul {
+      display: none;
+    }
+
+    li:hover ul li:hover ul {
+      display: flex;
+      top: 0;
+      left: 105px;
+    }
+
+    ul li ul li {
+      width: 150px;
+    }
+  }
+}
